@@ -31,4 +31,20 @@ Findings:
 
 This paper kind of proves that if you ought to use data from the pretrained generative models online then it might be harmful. Personally I have seen many some work using LLM to create training data. 
 
-## 2. On the Exploitability of Instruction Tuning (https://arxiv.org/pdf/2306.17194.pdf)
+## 2. Challenges and Applications of Large Language Models(https://arxiv.org/pdf/2307.10169.pdf)
+This is a survey paper on LLMs which discusses mainly challenges and application of LLMs. 
+
+General Knowledge: 
+- Models like GPT-4 and Claude can handle context windows of up to 32k and 100k tokens, respectively, equating to approximately 20k words or 40 pages of text. However, the cost of execution rises with the number of tokens used, hence the need for an efficient retriever to find the most relevant documents.
+-  
+
+Challenges:
+1. The very large amount of training dataset has made it impossible for individual to read and conduct quality assesments n the encompassed documents thoroughly.
+ - Near-Duplicates : This has been reported to degrade model performance.
+ - Overlap with the test data
+2. The goal of tokenizer is to handle rare and out-of-vocabulary words in a model’s vocabulary effectively while maintaining a limited number of tokens per sequence in the interest of computational complexity. But it comes with drawbacks:
+   - Number of tokens necessary to convey same information varies significantly across language.
+   - The embedding layer and output layer of LLM involve vocab size making up to 66% of the model parameter count.
+
+
+## 3. On the Exploitability of Instruction Tuning (https://arxiv.org/pdf/2306.17194.pdf)
